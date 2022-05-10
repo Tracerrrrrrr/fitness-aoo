@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { NativeBaseProvider, Text, Box, ScrollView } from 'native-base';
+import Login from "./Screens/Login"
+import MainScreen from './Screens/MainScreen';
+import AddExercise from "./Screens/AddExercise"
+const App=()=>{
+  return(
+    <>
+  <NativeBaseProvider>
+    <ScrollView>
+  <Login/>
+  <MainScreen/>
+  <AddExercise/>
+  </ScrollView>
+  </NativeBaseProvider>
+    </>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
